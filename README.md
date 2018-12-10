@@ -1,2 +1,0 @@
-# 42_printf
-printf
