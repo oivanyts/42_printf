@@ -105,7 +105,7 @@ $(OBJ_DIR):
 	mkdir $(OBJ_DIR)
 
 $(OBJ_DIR)%.o: %.c 
-	@$(CC) -c $< -o $@ $(FLAGS) $(HEADER_FLAGS) -O3
+	@$(CC) -c $< -o $@ $(FLAGS) $(HEADER_FLAGS)
 
 clean:
 	@rm -f $(OBJ)
