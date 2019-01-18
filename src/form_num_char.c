@@ -49,7 +49,7 @@ static int						fill_bit_union(va_list arg, t_format fx)
 	return (1);
 }
 
-char							*form_numbers(va_list arg, t_format fx)
+char							*form_numbers(va_list arg, t_format fx, int fd)
 {
 	char	*str;
 	int		i;
@@ -76,7 +76,7 @@ char							*form_numbers(va_list arg, t_format fx)
 	return (str);
 }
 
-int								format_char(va_list arg, t_format fx)
+int								format_char(va_list arg, t_format fx, int fd)
 {
 	int				print;
 	char			empty;
@@ -90,7 +90,7 @@ int								format_char(va_list arg, t_format fx)
 	while (fx.flag[0] != '-' && (i++ < fx.whidth))
 		write(1, &empty, 1);
 	if (fx.type == 'C' || (fx.type == 'c' && fx.mods == 'l'))
-		ret = ft_putchar_u(print);
+		ret = ft_putchar_u(print, fd);
 	else
 		write(1, &print, 1);
 	if ((MB_CUR_MAX < ft_charlen(print)))

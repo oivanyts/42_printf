@@ -83,5 +83,9 @@ add_executable(printf
         src/ft_strdup_u.c
         src/ft_charlen.c
         src/ft_parcer_printf.c
-        src/form_num_char.c src/ft_printbits_printf.c src/ft_color_input.c libft/src/ft_num_size.c)
+        src/form_num_char.c
+        src/ft_printbits_printf.c
+        src/ft_color_input.c
+        src/ft_printf_fd.c
+        libft/src/ft_num_size.c)
 

@@ -49,6 +49,7 @@ FUNCTIONS 	+= ft_strdup_u.c
 FUNCTIONS 	+= ft_strndup_u.c
 FUNCTIONS 	+= ft_color_input.c
 FUNCTIONS 	+= ft_max_number.c
+FUNCTIONS 	+= ft_printf_fd.c
 
 OBJ 		= $(addprefix $(OBJ_DIR), $(FUNCTIONS:.c=.o))
 
@@ -64,7 +65,7 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)%.o: %.c
 	@echo $@///
-	$(CC) -c $< -o $@ $(FLAGS) $(HEADER_FLAGS) -O3;
+	$(CC) -c $< -o $@ $(FLAGS) $(HEADER_FLAGS);
 
 $(LIBFT):
 	make -C $(LIBFT_DIR)

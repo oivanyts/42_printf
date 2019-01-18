@@ -15,7 +15,7 @@
 const char	*g_colortab[9] = { "{black}", "{red}", "{green}", "{yellow}",
 	"{blue}", "{magenta}", "{cyan}", "{white}", "{eoc}"};
 
-void	ft_color_input(char *color)
+void	ft_color_input(char *color, int fd)
 {
 	char	a[2];
 	int		n;
