@@ -135,7 +135,7 @@ char					*ft_itoa_double(long double num, t_format fx)
 	if (fx.flag[1] == '+' || fx.flag[1] == '-')
 		str[(fx.flag[3] == '0' && n++ ? 0 : (n++))] = fx.flag[1];
 	num = str_to_dot(num, &str[n], (len - 1) * (fx.type == 'f') + 1, fx.precs);
-	str_end(num, &str[len * (fx.type != 'e') + (fx.precs) + (fx.type == 'e') +
-	n], fx.precs, INT_MIN * (fx.type != 'e') + (len) * (fx.type == 'e'));
+	str_end(num, &str[len * (fx.type != 'e') + (fx.precs > 0) + (fx.type == 'e')
+	+ n], fx.precs, INT_MIN * (fx.type != 'e') + (len) * (fx.type == 'e'));
 	return (str);
 }
