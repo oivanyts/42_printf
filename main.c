@@ -11,7 +11,7 @@
 
 #define	NBR (long double)LDBL_MAX
 #define TYP "%d%d%d\n"
-#define ARG "{%.f} fsddfssdfdfsdfsdsfsdsdfdsf\n {%.e}", 82.35454,82.36545
+#define ARG "{%.f} fsddfssdfdfsdfsdsfsdsdfdsf\n {%.e}", 10.0, 10.0
 //#define ARG "%ls", L"中文"
 
 int main (void)

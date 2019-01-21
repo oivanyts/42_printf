@@ -20,7 +20,7 @@ static int				count_dig(long double num, t_format fx)
 		num *= -1.0;
 	if (num >= 1.0)
 	{
-		while (num > 1.0 && num > 10.0)
+		while (num > 1.0 && num >= 10.0)
 		{
 			num /= 10.0;
 			count++;
